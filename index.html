@@ -60,19 +60,19 @@
   .badge small { font-weight: 500; opacity: .8; }
   .phone {
     justify-self: center;
-    width: min(300px, 80vw);
+    width: min(330px, 82vw);
     border-radius: 44px;
     padding: 10px;
     background: #0d0d14;
     box-shadow: 0 30px 80px rgba(10,8,40,.45);
   }
-  .phone img { display: block; width: 100%; border-radius: 34px; }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 34px; }
 
   section { padding: 72px 0; }
   h2 { font-size: clamp(26px, 3.4vw, 34px); letter-spacing: -0.02em; margin: 0 0 12px; }
   .sub { color: var(--muted); margin: 0 0 36px; max-width: 40em; }
 
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
   .card {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -92,7 +92,7 @@
   .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
   .shots figure { margin: 0; }
   .shots img {
-    width: 100%; display: block;
+    width: 100%; height: auto; display: block;
     border-radius: 28px; border: 1px solid var(--line);
     box-shadow: 0 14px 40px rgba(20,16,60,.12);
   }
@@ -134,7 +134,7 @@
         <span class="badge">Mac <small>· yakında</small></span>
       </div>
     </div>
-    <div class="phone"><img src="img/home.png" alt="Alarm Pro ana ekranı: Genel, İş, Hafta Sonu ve iPhone Alarmları grupları" width="502" height="900"></div>
+    <div class="phone"><picture><source srcset="img/home-dark.png" media="(prefers-color-scheme: dark)"><img src="img/home-light.png" alt="Alarm Pro ana ekranı: İş, İlaç, Spor ve Hafta Sonu grupları" width="561" height="1000"></picture></div>
   </div>
 </header>
 
@@ -174,6 +174,11 @@
           <h3>Erteleme ve Kilit Ekranı</h3>
           <p>Erteleme süresini alarm ya da grup bazında seçin; geri sayım Kilit Ekranı'nda ve Dynamic Island'da görünür.</p>
         </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.6H20l-4.9 3.6 1.9 5.8L12 14.4 7 18l1.9-5.8L4 8.6h6.1z"/></svg></div>
+          <h3>Reklamsız Premium</h3>
+          <p>Uygulama ücretsizdir. Aylık küçük bir abonelikle reklamlar tamamen kalkar; iPhone ve Mac'te aynı abonelik geçerlidir.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -181,11 +186,11 @@
   <section style="padding-top:0">
     <div class="wrap">
       <h2>Yakından bakın</h2>
-      <p class="sub">Grup ayarları, günlük değişen ses ve kategorili ses kütüphanesi.</p>
+      <p class="sub">Grup ayarları, günlük değişen ses ve kategorili ses kütüphanesi. Uygulama, cihazınız açık temadaysa açık, koyu temadaysa koyu görünür.</p>
       <div class="shots">
-        <figure><img src="img/group.png" alt="Grup ayarları ekranı" loading="lazy" width="502" height="900"><figcaption>Grup ayarları</figcaption></figure>
-        <figure><img src="img/rotate.png" alt="Her gün değişen alarm sesi ayarı" loading="lazy" width="502" height="900"><figcaption>Her gün değişen ses</figcaption></figure>
-        <figure><img src="img/sounds.png" alt="Ses kütüphanesi: eski telefonlar kategorisi" loading="lazy" width="502" height="900"><figcaption>Ses kütüphanesi</figcaption></figure>
+        <figure><picture><source srcset="img/group-dark.png" media="(prefers-color-scheme: dark)"><img src="img/group-light.png" alt="Grup ayarları ekranı" loading="lazy" width="561" height="1000"></picture><figcaption>Grup ayarları</figcaption></figure>
+        <figure><picture><source srcset="img/rotate-dark.png" media="(prefers-color-scheme: dark)"><img src="img/rotate-light.png" alt="Her gün değişen alarm sesi ayarı" loading="lazy" width="561" height="1000"></picture><figcaption>Her gün değişen ses</figcaption></figure>
+        <figure><picture><source srcset="img/sounds-dark.png" media="(prefers-color-scheme: dark)"><img src="img/sounds-light.png" alt="Ses kütüphanesi: eski telefonlar kategorisi" loading="lazy" width="561" height="1000"></picture><figcaption>Ses kütüphanesi</figcaption></figure>
       </div>
     </div>
   </section>
